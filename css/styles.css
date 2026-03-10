@@ -130,7 +130,7 @@ h1, h2, h3, h4 {
 .header-inner {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 10px 28px;
+  padding: 10px 28px 10px 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -216,8 +216,8 @@ h1, h2, h3, h4 {
 .hero {
   background-color: var(--off-white);
   background-image:
-    linear-gradient(rgba(245, 243, 238, 0.88), rgba(245, 243, 238, 0.88)),
-    url('../images/hero-bg-suburban-homes.jpg');
+    linear-gradient(rgba(245, 243, 238, 0.85), rgba(245, 243, 238, 0.85)),
+    url('../images/bending-tree-canopy.jpg');
   background-size: cover;
   background-position: center;
   color: var(--text-dark);
@@ -230,6 +230,7 @@ h1, h2, h3, h4 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 580px;
+  align-items: center;
 }
 
 .hero-text {
@@ -239,46 +240,45 @@ h1, h2, h3, h4 {
   padding: 70px 60px 70px 28px;
 }
 
-.hero-eyebrow {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
+.hero-name {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.0;
   text-transform: uppercase;
+  letter-spacing: 0.03em;
   color: var(--green);
-  margin-bottom: 18px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  margin-bottom: 10px;
 }
 
-.hero-eyebrow::before {
-  content: '';
-  display: block;
-  width: 30px;
-  height: 2px;
-  background: var(--green);
-  opacity: 0.5;
-}
-
-.hero-text h1 {
-  font-size: 3.4rem;
-  font-weight: 700;
-  line-height: 1.05;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-  margin-bottom: 20px;
-  color: var(--green);
-}
-
-.hero-text .subhead {
+.hero-seat {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1rem;
+  font-size: 0.82rem;
   font-weight: 400;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-mid);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-seat-line {
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: var(--green);
+  opacity: 0.4;
+}
+
+.hero-tagline {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--green);
   margin-bottom: 32px;
-  line-height: 1.6;
+  letter-spacing: 0.01em;
 }
 
 .hero-contact {
@@ -306,12 +306,14 @@ h1, h2, h3, h4 {
 .hero-image {
   position: relative;
   overflow: hidden;
+  padding: 40px 28px 40px 0;
 }
 .hero-image img {
   width: 100%;
-  height: 100%;
+  height: 500px;
   object-fit: cover;
   object-position: top center;
+  border-radius: 2px;
 }
 
 /* ── PAGE HEADER (inner pages) ──────────────────────────────── */
@@ -500,6 +502,78 @@ h1, h2, h3, h4 {
   line-height: 1.5;
 }
 
+/* Checkbox group */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--green);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* ── EXPERIENCE GRID ───────────────────────────────────────── */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 28px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.experience-item {
+  padding: 28px 24px;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+
+.experience-item:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+.experience-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--green);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-size: 1rem;
+}
+
+.experience-item h3 {
+  font-size: 1rem;
+  color: var(--green);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.experience-item p {
+  font-size: 0.85rem;
+  color: var(--text-mid);
+  line-height: 1.65;
+}
+
 /* Key dates */
 .key-dates-card {
   background: var(--green);
@@ -574,12 +648,10 @@ h1, h2, h3, h4 {
   max-width: 1180px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: auto 1fr;
   gap: 40px;
   align-items: center;
 }
-
-.footer-logo img { height: 68px; width: auto; }
 
 .footer-donate { text-align: center; }
 
@@ -827,33 +899,54 @@ h1, h2, h3, h4 {
   margin-bottom: 24px;
 }
 
-.endorsement-list {
-  list-style: none;
+.endorsement-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 0;
-  border-top: 1px solid var(--rule);
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 28px;
 }
 
-.endorsement-list li {
-  padding: 16px 20px;
-  border-bottom: 1px solid var(--rule);
-  border-right: 1px solid var(--rule);
-  font-size: 0.95rem;
-  color: var(--text-mid);
+.endorsement-card {
+  background: var(--off-white);
+  border-radius: 6px;
+  padding: 28px 20px;
+  text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
-.endorsement-list li strong {
+.endorsement-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.endorsement-photo.endorsement-logo {
+  border-radius: 0;
+  object-fit: contain;
+  background: var(--white);
+  padding: 8px;
+}
+
+.endorsement-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.endorsement-card-info strong {
   color: var(--text-dark);
   font-weight: 700;
+  font-size: 0.95rem;
 }
 
-.endorsement-list li span {
+.endorsement-card-info span {
   font-size: 0.8rem;
+  color: var(--text-mid);
   opacity: 0.7;
-  margin-top: 2px;
 }
 
 /* ── EVENTS PAGE ─────────────────────────────────────────────── */
@@ -994,7 +1087,10 @@ h1, h2, h3, h4 {
     height: 380px;
   }
 
-  .hero-text h1 { font-size: 2.4rem; }
+  .hero-name { font-size: 2.8rem; }
+  .hero-tagline { font-size: 1.4rem; }
+  .hero-image { padding: 20px 28px; }
+  .hero-image img { height: 380px; }
 
   .two-col {
     grid-template-columns: 1fr;
@@ -1024,8 +1120,10 @@ h1, h2, h3, h4 {
 
 @media (max-width: 640px) {
   .header-right .btn { display: none; }
-  .hero-text h1 { font-size: 2rem; }
+  .hero-name { font-size: 2.2rem; }
+  .hero-tagline { font-size: 1.2rem; }
   .page-header h1 { font-size: 2rem; }
+  .experience-grid { grid-template-columns: 1fr; }
   .hero-contact { flex-direction: column; gap: 10px; }
   .form-row { grid-template-columns: 1fr; }
   .footer-bottom-inner { flex-direction: column; text-align: center; }

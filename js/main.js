@@ -49,6 +49,19 @@
     });
   });
 
+  // Phone number auto-formatting: (954) 555-1234
+  document.querySelectorAll('input[type="tel"]').forEach(function (input) {
+    input.addEventListener('input', function () {
+      var digits = this.value.replace(/\D/g, '').substring(0, 10);
+      var formatted = '';
+      if (digits.length > 0) formatted = '(' + digits.substring(0, 3);
+      if (digits.length >= 3) formatted += ') ';
+      if (digits.length > 3) formatted += digits.substring(3, 6);
+      if (digits.length >= 6) formatted += '-' + digits.substring(6, 10);
+      this.value = formatted;
+    });
+  });
+
   // Form submission handler (Formspree)
   const joinForm = document.getElementById('join-form');
   if (joinForm) {

@@ -19,7 +19,7 @@
     <div class="header-inner">
       <div class="logo">
         <a href="index.html" aria-label="David Angel for Cooper City Commission — Home">
-          <img src="images/ANGEL-BRANDING-FINAL-GREEN copy.png" alt="David Angel for Cooper City Commission, District 3" />
+          <img src="images/angel-branding-final-green-copy.png" alt="David Angel for Cooper City Commission, District 3" />
         </a>
       </div>
       <nav class="site-nav" id="site-nav" aria-label="Main navigation">
@@ -28,15 +28,14 @@
         <a href="priorities.html">Priorities</a>
         <a href="join.html" class="active">Join</a>
         <a href="endorsements.html">Endorsements</a>
-        <a href="events.html">Events</a>
+        <a href="events.html" style="display:none;">Events</a>
       </nav>
       <div class="header-right">
         <div class="social-bar" aria-label="Social media links">
-          <a href="#" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="X / Twitter" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://www.facebook.com/davidangelforcoopercity/" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/davidforcoopercity/" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
         </div>
-        <a href="#donate" class="btn btn-white">Donate</a>
+        <a href="https://secure.anedot.com/david-angel-for-cooper-city-commission-9b75504b-1ee2-4fb7-9f40-5813d05e047b/davidangelforcoopercity?exitIntent=true" class="btn btn-white">Donate</a>
         <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
           <span></span><span></span><span></span>
         </button>
@@ -46,171 +45,89 @@
 
   <!-- ════════════════════════ JOIN HERO ═══════════════════════════════════ -->
   <div class="join-hero">
-    <img src="images/Get Involved.jpeg" alt="David Angel with campaign supporters" />
+    <img src="images/get-involved.jpeg" alt="David Angel with campaign supporters" />
     <div class="join-hero-text">
       <h1>Get Involved</h1>
-      <p>
-        Elections are won by people who show up. Whether you can knock on doors, make calls, put up a yard sign, or chip in a few dollars — every act of support matters. Join our team today.
-      </p>
     </div>
   </div>
 
   <!-- ═══════════════════════ JOIN CONTENT ═════════════════════════════════ -->
   <div class="join-content">
-    <div class="join-inner">
+    <div style="max-width:600px;margin:0 auto;">
 
-      <!-- Copy / Ways to Help -->
-      <div class="join-copy">
-        <span class="section-label">How You Can Help</span>
-        <h2>There's a Place for Everyone on This Team</h2>
-        <div class="rule"></div>
-        <p>
-          Grassroots campaigns succeed when the community comes together. You don't need to be a political insider or have a lot of free time — even small contributions of time or treasure make a real difference in a local race like this one.
-        </p>
-        <p>
-          District 3 is decided by neighbors talking to neighbors. When you volunteer, you're not just helping a campaign — you're helping shape the future of the city you live in.
-        </p>
-
-        <ul class="ways">
-          <li>
-            <i class="fas fa-walking way-icon"></i>
-            <div>
-              <strong>Canvass &amp; Knock Doors</strong>
-              Talk to your neighbors and share David's message. We'll provide all the materials you need.
-            </div>
-          </li>
-          <li>
-            <i class="fas fa-phone-alt way-icon"></i>
-            <div>
-              <strong>Phone Bank</strong>
-              Call likely voters from home or at one of our campaign offices. Flexible scheduling available.
-            </div>
-          </li>
-          <li>
-            <i class="fas fa-sign way-icon"></i>
-            <div>
-              <strong>Yard Signs</strong>
-              Show the neighborhood where you stand. Request a yard sign and we'll get it to you.
-            </div>
-          </li>
-          <li>
-            <i class="fas fa-share-alt way-icon"></i>
-            <div>
-              <strong>Spread the Word Online</strong>
-              Follow and share our social media posts. Word of mouth is powerful — even digitally.
-            </div>
-          </li>
-          <li>
-            <i class="fas fa-hand-holding-heart way-icon"></i>
-            <div>
-              <strong>Host a House Party</strong>
-              Invite friends and neighbors to meet David in your home or backyard. Contact us to schedule.
-            </div>
-          </li>
-        </ul>
+      <div style="text-align:center;margin-bottom:36px;">
+        <h2 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--green);margin-bottom:8px;">Sign up to volunteer or stay connected with the campaign</h2>
       </div>
 
-      <!-- Sign Up Form -->
-      <div>
-        <div class="signup-card">
-          <h3>Sign Up to Help</h3>
-          <p class="card-sub">Fill out this form and a member of our team will follow up with next steps.</p>
-
-          <!-- Replace YOUR_FORM_ID with your Formspree form ID at formspree.io -->
-          <form id="join-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="first-name">First Name *</label>
-                <input type="text" id="first-name" name="first_name" required placeholder="Jane" />
-              </div>
-              <div class="form-group">
-                <label for="last-name">Last Name *</label>
-                <input type="text" id="last-name" name="last_name" required placeholder="Smith" />
-              </div>
+      <div class="signup-card">
+        <form id="join-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name *</label>
+              <input type="text" id="first-name" name="first_name" required />
             </div>
             <div class="form-group">
-              <label for="email">Email Address *</label>
-              <input type="email" id="email" name="email" required placeholder="jane@example.com" />
+              <label for="last-name">Last Name *</label>
+              <input type="text" id="last-name" name="last_name" required />
             </div>
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" placeholder="(954) 555-0100" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
+          <div class="form-group">
+            <label for="address">Street Address</label>
+            <input type="text" id="address" name="address" />
+          </div>
+          <div class="form-group">
+            <label for="zip">Zip Code</label>
+            <input type="text" id="zip" name="zip" pattern="[0-9]{5}" />
+          </div>
+          <div class="form-group">
+            <label>I'd like to</label>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest[]" value="volunteer" />
+                <span>Volunteer</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest[]" value="updates" />
+                <span>Get Campaign Updates</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="interest[]" value="volunteer-and-updates" />
+                <span>Volunteer and Get Campaign Updates</span>
+              </label>
             </div>
-            <div class="form-group">
-              <label for="address">Street Address</label>
-              <input type="text" id="address" name="address" placeholder="123 Main St, Cooper City" />
-            </div>
-            <div class="form-group">
-              <label for="zip">Zip Code</label>
-              <input type="text" id="zip" name="zip" placeholder="33328" pattern="[0-9]{5}" />
-            </div>
-            <div class="form-group">
-              <label for="interest">I want to</label>
-              <select id="interest" name="interest">
-                <option value="">— Select one —</option>
-                <option value="canvass">Canvass / Knock Doors</option>
-                <option value="phone">Phone Bank</option>
-                <option value="yard-sign">Get a Yard Sign</option>
-                <option value="host">Host a House Party</option>
-                <option value="social">Spread the Word Online</option>
-                <option value="donate">Make a Donation</option>
-                <option value="updates">Just Keep Me Updated</option>
-              </select>
-            </div>
-            <button type="submit" class="btn btn-green btn-submit">Submit</button>
-            <p class="legal-copy">
-              Paid for by David Angel for Cooper City Commission. By submitting this form, you agree to receive campaign communications. You may unsubscribe at any time. Your information will not be shared with third parties outside of the campaign.
-            </p>
-          </form>
-        </div>
+          </div>
+          <button type="submit" class="btn btn-green btn-submit">Submit</button>
+          <p class="legal-copy">
+            Paid for by David Angel for Cooper City Commission. By submitting this form, you agree to receive campaign communications. You may unsubscribe at any time.
+          </p>
+        </form>
       </div>
 
     </div>
   </div>
 
-  <!-- ═══════════════════════════ DONATE SECTION ═══════════════════════════ -->
-  <section id="donate" style="background:var(--green);color:var(--white);padding:80px 28px;text-align:center;">
-    <div class="container" style="max-width:720px;">
-      <span class="section-label white">Support the Campaign</span>
-      <h2 style="font-size:2.2rem;margin-bottom:20px;">Make a Donation</h2>
-      <div class="rule white" style="margin:0 auto 28px;"></div>
-      <p style="opacity:0.88;font-size:1rem;line-height:1.85;margin-bottom:40px;">
-        Local campaigns run on community support. Every dollar raised goes directly to reaching Cooper City voters — yard signs, mailers, digital outreach, and events. Even a small contribution makes a real difference.
-      </p>
-
-      <!-- Replace this with your actual donation platform link (ActBlue, PayPal, etc.) -->
-      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:48px;">
-        <a href="#" class="btn btn-white" style="min-width:120px;">$25</a>
-        <a href="#" class="btn btn-white" style="min-width:120px;">$50</a>
-        <a href="#" class="btn btn-white" style="min-width:120px;">$100</a>
-        <a href="#" class="btn btn-white" style="min-width:120px;">$250</a>
-        <a href="#" class="btn btn-outline-white" style="min-width:140px;">Other Amount</a>
-      </div>
-
-      <p style="font-size:0.72rem;opacity:0.55;max-width:540px;margin:0 auto;">
-        Contributions are not tax-deductible. The maximum contribution per individual is set by Florida campaign finance law. Paid for by David Angel for Cooper City Commission. By Florida law, political contributions from corporations are prohibited.
-      </p>
-    </div>
-  </section>
-
   <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
   <footer class="site-footer">
     <div class="footer-top">
       <div class="footer-top-inner">
-        <div class="footer-logo">
-          <img src="images/ANGEL-BRANDING-FINAL-GREEN copy.png" alt="David Angel for Cooper City Commission" />
-        </div>
         <div class="footer-donate">
-          <a href="#donate" class="btn btn-white footer-donate-btn">Donate</a>
+          <a href="https://secure.anedot.com/david-angel-for-cooper-city-commission-9b75504b-1ee2-4fb7-9f40-5813d05e047b/davidangelforcoopercity?exitIntent=true" class="btn btn-white footer-donate-btn">Donate</a>
           <div class="footer-social" aria-label="Social media">
-            <a href="#" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="X / Twitter" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.facebook.com/davidangelforcoopercity/" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/davidforcoopercity/" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
         <div class="footer-contact">
-          <a href="tel:9545550100"><i class="fas fa-phone" aria-hidden="true"></i>&nbsp; (954) 555-0100</a><br/>
-          <a href="mailto:info@davidangelcc.com"><i class="fas fa-envelope" aria-hidden="true"></i>&nbsp; info@davidangelcc.com</a>
+          <a href="tel:9543614833"><i class="fas fa-phone" aria-hidden="true"></i>&nbsp; 954-361-4833</a><br/>
+          <a href="mailto:davidforcoopercity@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i>&nbsp; davidforcoopercity@gmail.com</a>
         </div>
       </div>
     </div>
