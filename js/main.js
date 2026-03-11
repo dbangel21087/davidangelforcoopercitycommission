@@ -62,7 +62,9 @@
     });
   });
 
-  // Form submission handler (Formspree)
+  // Form submission handler (Google Sheets)
+  const FORM_URL = 'https://script.google.com/macros/s/AKfycby0Iw519bi1rv8oNB9e4o2ab45Ff6NrZAxU5aw1Uaei6FvXZcpuAenX6h9A3GmUNNe6QQ/exec';
+
   const joinForm = document.getElementById('join-form');
   if (joinForm) {
     joinForm.addEventListener('submit', async function (e) {
@@ -71,24 +73,29 @@
       btn.textContent = 'Submitting…';
       btn.disabled = true;
 
+      const fd = new FormData(joinForm);
+      const data = {
+        first_name:   fd.get('first_name')  || '',
+        last_name:    fd.get('last_name')   || '',
+        email:        fd.get('email')       || '',
+        phone:        fd.get('phone')       || '',
+        zip:          fd.get('zip')         || '',
+        'interest[]': fd.getAll('interest[]')
+      };
+
       try {
-        const response = await fetch(joinForm.action, {
+        await fetch(FORM_URL, {
           method: 'POST',
-          body: new FormData(joinForm),
-          headers: { Accept: 'application/json' },
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
         });
 
-        if (response.ok) {
-          joinForm.innerHTML =
-            '<div style="text-align:center;padding:32px 0;">' +
-            '<p style="font-family:\'Playfair Display\',serif;font-size:1.4rem;color:#2D4A25;margin-bottom:10px;">Thank you for signing up!</p>' +
-            '<p style="color:#4a4a4a;font-size:0.95rem;">We\'ll be in touch soon. Together, we\'ll Keep Cooper City Special.</p>' +
-            '</div>';
-        } else {
-          btn.textContent = 'Try Again';
-          btn.disabled = false;
-          alert('There was a problem submitting. Please try again or email us directly.');
-        }
+        var card = joinForm.closest('.signup-card') || joinForm;
+        card.innerHTML =
+          '<div style="text-align:center;padding:48px 0;">' +
+          '<p style="font-family:\'Playfair Display\',serif;font-size:1.6rem;color:#2D4A25;margin:0;">Thank you for signing up!</p>' +
+          '</div>';
       } catch (err) {
         btn.textContent = 'Try Again';
         btn.disabled = false;
